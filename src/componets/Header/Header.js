@@ -6,7 +6,7 @@ function Header() {
     <header id="nav">
     <div className="nav-wrapper">
       <div className="logo">
-        RBP.img
+        RBP.im g
       </div>
       <div className="menu-wrapper">
         <ul className="menu">
