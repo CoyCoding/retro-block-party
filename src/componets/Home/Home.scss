@@ -1,11 +1,4 @@
 #home {
-  background: #2e2e2e;
-  color: #cfcfcf;
-  border-top: #a1a1a1 solid;
-  overflow: hidden;
-  position: relative;
-  z-index: 0;
-
   .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -13,48 +6,44 @@
     display: flex;
     overflow: hidden;
     align-items: center;
-
-    .rbp-what-is {
-      width: 60%;
-      padding: 20px;
-      z-index: 1;
-
-      h2 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        margin-bottom: 40px;
-        font-weight: 700;
-        color: #eb64fc;
-      }
-
-      p {
-        line-height: 2.5rem;
-        font-size: 1.2rem;
-        color: white;
-        text-indent: 20px;
-        margin: 0 0 20px;
-      }
-    }
-
-    .img {
-      width: 40%;
-      padding: 20px;
-      z-index: 1;
-
-      img {
-        width: 100%;
-      }
-    }
   }
 
-  .circle {
-    position: absolute;
-    height: 200%;
-    width: 100%;
-    background: #525252;
-    top: -50%;
-    left: 50%;
-    z-index: 0;
-    border-radius: 50%;
+
+    .faq-section {
+      background: linear-gradient(45deg, #00007eb8, #03001ec4), url(https://ak8.picdn.net/shutterstock/videos/11818658/thumb/1.jpg);
+      background-position: center;
+      color: white;
+      background-repeat: no-repeat;
+      background-size: cover;
+          border-top: #a1a1a1 solid;
+     .container{
+       padding: 80px 0;
+       .faq-grid {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-gap: 100px;
+
+         .faq-location {
+           padding: 20px;
+           border-left: #eb64fc solid;
+
+           .title {
+             margin-bottom: 20px;
+             letter-spacing: 0.2rem;
+
+             h3 {
+               font-size: 2rem;
+               text-transform: uppercase;
+                   color: #e54910;
+             }
+           }
+           .description{
+             line-height: 1.8rem;
+   font-size: 1.1rem;
+           }
+         }
+       }
+     }
+
+    }
   }
-}

@@ -1,26 +1,51 @@
 import React from 'react';
 import './Home.scss';
+import WhatIsItSection from './Sections/WhatIsItSection'
 
 function Home() {
   return (
     <section id="home">
-    <div className="container">
-      <div className="rbp-what-is">
-        <h2>What is Retro Block Party?</h2>
-        <p>RetroBlockParty is about bringing the retro community together monthy to support charities.
-        Each month, a roster of streamers chosen for the opportunity to participate in something greater than themselves!</p>
-
-          <p>To date, the community has raised nearly $49,000 for St. Jude, American Foundation for Suicide Prevention, Child's Play, World Wildlife Fund, Stack-Up, Fuck Cancer, Anxiety Gaming, 1-Up On Cancer, and Toys For Tots!
-            Thank you all, you crazy, amazing people! We wouldn’t be where we are without YOU!  </p>
+      <WhatIsItSection />
+      <section className="faq-section">
+      <div className="container">
+      <div className="faq-grid">
+      <div className="faq-location">
+        <div className="title">
+          <h3>Can I come to the Party?</h3>
+        </div>
+        <div className="description">
+          <p>Of course, The Retro Block Party is all about bringing the streaming community together for charity.</p>
+        </div>
+        </div>
+        <div className="faq-location">
+          <div className="title">
+            <h3>So wheres the party at?</h3>
+          </div>
+          <div className="description">
+            <p>The Retro Block Party takes place entirely on twitch.tv allowing to show up
+            no matter where you are.</p>
+          </div>
+          </div>
+          <div className="faq-location">
+            <div className="title">
+              <h3>When is the party?</h3>
+            </div>
+            <div className="description">
+              <p>The Retro Block Party takes place once month for whole weekend, so you can party all night long.
+              For more details check out the current <a>Schedule Page</a></p>
+            </div>
+            </div>
+          <div className="faq-location">
+            <div className="title">
+              <h3>How do I join?</h3>
+            </div>
+            <div className="description">
+              <p>If you want to get off the lawn and on the dance floor check out the<a>Application Page</a> for more info.</p>
+            </div>
+            </div>
+            </div>
       </div>
-      <div className="img">
-        <img src="https://media.discordapp.net/attachments/477927083809439786/587123859107610624/TFIRneon.png" />
-      </div>
-
-      </div>
-      <div className="circle">
-
-      </div>
+      </section>
     </section>
   );
 }
