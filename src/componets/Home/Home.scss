@@ -6,6 +6,7 @@
     display: flex;
     overflow: hidden;
     align-items: center;
+        flex-wrap: wrap;
   }
 
 
@@ -22,10 +23,15 @@
          display: grid;
          grid-template-columns: 1fr 1fr;
          grid-gap: 100px;
+             margin: 0 20px;
 
          .faq-location {
            padding: 20px;
            border-left: #eb64fc solid;
+           border-right: #eb64fc solid;
+           text-align: center;
+           background: #00000085;
+
 
            .title {
              margin-bottom: 20px;
@@ -34,7 +40,7 @@
              h3 {
                font-size: 2rem;
                text-transform: uppercase;
-                   color: #e54910;
+                color: #00c7ff;
              }
            }
            .description{
@@ -46,4 +52,64 @@
      }
 
     }
+  }
+
+  @media screen and (max-width: 1199px) {
+    #hero{
+      .hero-bg{
+        justify-content: center;
+        .rbp-img{
+          width: 100%;
+        }
+        .rbp-img2{
+          justify-content: center;
+              margin: 0 20px;
+          h2{
+            font-size: 2rem;
+            text-align: center;
+            margin: 0 0 50px;
+          }
+        }
+      }
+    }
+    #home{
+      .rbp-what-is{
+        text-align: center;
+        width: 100%;
+      }
+      .img{
+        margin: 0 auto;
+        width: 75%;
+      }
+    }
+  }
+  @media screen and (max-width:  767px) {
+    #hero{
+      .hero-bg{
+        .rbp-img{
+        }
+        .rbp-img2{
+          h2{
+            font-size: 1.5rem;
+            span{
+                font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+    #home{
+      .rbp-what-is{
+      }
+      .img{
+      }
+      .faq-section{
+      .faq-grid{
+         grid-template-columns: 1fr !important;
+         grid-gap: 50px !important;
+      }
+
+      }
+    }
+
   }

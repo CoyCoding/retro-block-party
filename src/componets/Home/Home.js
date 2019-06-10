@@ -22,7 +22,7 @@ function Home() {
             <h3>So wheres the party at?</h3>
           </div>
           <div className="description">
-            <p>The Retro Block Party takes place entirely on twitch.tv allowing to show up
+            <p>The Retro Block Party takes place entirely on twitch.tv allowing you to show up
             no matter where you are.</p>
           </div>
           </div>
@@ -40,7 +40,7 @@ function Home() {
               <h3>How do I join?</h3>
             </div>
             <div className="description">
-              <p>If you want to get off the lawn and on the dance floor check out the<a>Application Page</a> for more info.</p>
+              <p>If you want to get off the lawn and on the dance floor check out the <a>Application Page</a> for more info.</p>
             </div>
             </div>
             </div>
