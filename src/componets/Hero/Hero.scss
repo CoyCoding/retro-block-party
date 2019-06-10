@@ -1,19 +1,24 @@
 #hero {
   width: 100%;
-  background: linear-gradient( #080808, #000339ba, #080808), url('../.././img/retro-bg.jpg');
+  background: linear-gradient(#080808, #000339ba, #080808), url("../.././img/retro-bg.jpg");
   background-position: center;
   background-size: 15%;
   padding-top: 56px;
-padding-top: 56px;
+  padding-top: 56px;
+
   .hero-bg {
     margin: 0 auto;
     max-width: 1400px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+
     .rbp-img {
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 1;
 
       img {
         width: 100%;
@@ -23,9 +28,10 @@ padding-top: 56px;
 
     .rbp-img2 {
       display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          flex-grow: 2;
+      align-items: center;
+      justify-content: flex-end;
+      flex-grow: 2;
+      z-index: 1;
 
       h2 {
         font-size: 2.5rem;
@@ -34,11 +40,35 @@ padding-top: 56px;
         letter-spacing: 0.2rem;
         text-align: center;
         margin-right: 8%;
+
         span {
           font-size: 3.5rem;
-  letter-spacing: 0;
-}
+          letter-spacing: 0;
+        }
       }
     }
+    .vid-wrapper{
+      position: absolute;
+      width: 32%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0;
+      overflow: hidden;
+      animation: fade-in 1s ease-in 2s forwards;
+          .vid{
+            width: 190%;
+            left: -50%;
+            position: relative;
+          }
+    }
+  }
+}
+
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: .3;
   }
 }
