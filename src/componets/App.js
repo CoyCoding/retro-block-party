@@ -10,7 +10,7 @@ export default class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			scheduleOpen: true
+			scheduleStatus: 'open'
 		};
 	};
 
@@ -22,7 +22,7 @@ export default class App extends Component {
 				<Switch>
 					<Route exact  path="/" component={Home}/>
 					<Route exact path="/schedule" render={props =>
-						<Schedule {...props} scheduleOpen={this.state.scheduleOpen}/>
+						<Schedule {...props} scheduleStatus={this.state.scheduleStatus}/>
 					}
 						/>
 					<Route component={NotFound}/>

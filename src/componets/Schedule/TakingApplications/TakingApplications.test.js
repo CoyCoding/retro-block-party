@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hero from './Hero';
+import TakingApplications from './TakingApplications';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Hero />, div);
+  ReactDOM.render(<TakingApplications />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

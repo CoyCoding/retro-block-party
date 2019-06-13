@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.scss';
-import WhatIsItSection from './Sections/WhatIsItSection'
+import WhatIsItSection from './WhatIsItSection/WhatIsItSection'
 import Hero from './Hero/Hero';
 import FaqSection from './FaqSection/FaqSection';
 
