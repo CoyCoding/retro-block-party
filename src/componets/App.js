@@ -12,8 +12,14 @@ export default class App extends Component {
 		this.state = {
 			scheduleStatus: 'closed'
 		};
+		this.scheduleStatusChange = this.scheduleStatusChange.bind(this);
 	};
 
+	scheduleStatusChange(event) {
+			this.setState({
+				scheduleStatus: event.target.value
+			});
+	};
 
 	render() {
 		return (
@@ -22,7 +28,7 @@ export default class App extends Component {
 				<Switch>
 					<Route exact  path="/" component={Home}/>
 					<Route exact path="/schedule" render={props =>
-						<Schedule {...props} scheduleStatus={this.state.scheduleStatus}/>
+						<Schedule {...props} scheduleStatus={this.state.scheduleStatus} scheduleStatusChange={this.scheduleStatusChange}/>
 					}
 						/>
 					<Route component={NotFound}/>

@@ -9,6 +9,12 @@ import ApplicationsClosed from './ApplicationsClosed/ApplicationsClosed';
 export function Schedule(props) {
   return (
     <section id="schedule">
+      <select value={props.scheduleStatus} onChange={props.scheduleStatusChange}>
+        <option value="open">open</option>
+        <option value="offseason">offseason</option>
+        <option value="closed">closed</option>
+        <option value="finished">finished</option>
+      </select>
       <div className="schedule-wrapper">
       {handleScheduleStatus(props.scheduleStatus)}
       </div>

@@ -11,10 +11,10 @@ function Header() {
       <div className="menu-wrapper">
         <ul className="menu">
           <li>
-              <a href="#">Home </a>
+              <a href="/">Home </a>
           </li>
           <li>
-            <a href="#">Schedule</a>
+            <a href="/schedule">Schedule</a>
           </li>
           <li>
             <a href="#">  Apply</a>
