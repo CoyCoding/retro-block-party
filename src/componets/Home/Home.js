@@ -10,7 +10,6 @@ function Home() {
       <Hero />
       <WhatIsItSection />
       <FaqSection />
-      
     </section>
   );
 }

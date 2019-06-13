@@ -1,4 +1,43 @@
-#hero {
+#faq-section {
+      background: linear-gradient(45deg, #0f1c4d, #03001ec4),  url(https://ak8.picdn.net/shutterstock/videos/11818658/thumb/1.jpg);
+  background-position: center;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+      border-top: #a1a1a1 solid;
+ .container{
+   padding: 80px 0;
+   .faq-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 100px;
+         margin: 0 20px;
+
+     .faq-location {
+       padding: 20px;
+       border-left: #eb64fc solid;
+       border-right: #eb64fc solid;
+       text-align: center;
+       background: #00000085;
+
+
+       .title {
+         margin-bottom: 20px;
+         letter-spacing: 0.2rem;
+
+         h3 {
+           font-size: 2rem;
+           text-transform: uppercase;
+            color: #00c7ff;
+         }
+       }
+       .description{
+         line-height: 1.8rem;
+         font-size: 1.1rem;
+       }
+     }
+   }
+ }
 
 }
 

@@ -3,7 +3,7 @@ import './FaqSection.scss';
 
 function FaqSection() {
   return (
-    <section className="faq-section">
+    <section id="faq-section">
     <div className="container">
     <div className="faq-grid">
     <div className="faq-location">
