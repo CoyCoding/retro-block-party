@@ -64,6 +64,46 @@
   }
 }
 
+
+@media screen and (max-width: 1199px) {
+  #hero{
+    .hero-bg{
+      justify-content: center;
+      .rbp-img{
+        width: 100%;
+      }
+      .rbp-img2{
+        justify-content: center;
+            margin: 0 20px;
+        h2{
+          font-size: 2rem;
+          text-align: center;
+          margin: 0 0 50px;
+          margin-right: 0%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:  767px) {
+  #hero{
+    min-height: calc(100vh);
+  display: flex;
+    .hero-bg{
+      .rbp-img{
+      }
+      .rbp-img2{
+        h2{
+          font-size: 1.5rem;
+          span{
+              font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
 @keyframes fade-in{
   0%{
     opacity: 0;

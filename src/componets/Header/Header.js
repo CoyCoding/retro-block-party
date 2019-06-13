@@ -11,19 +11,19 @@ function Header() {
       <div className="menu-wrapper">
         <ul className="menu">
           <li>
-              <a>Home </a>
+              <a href="#">Home </a>
           </li>
           <li>
-            <a>Schedule</a>
+            <a href="#">Schedule</a>
           </li>
           <li>
-            <a>  Apply</a>
+            <a href="#">  Apply</a>
           </li>
           <li>
-              <a>organize</a>
+              <a href="#">organize</a>
           </li>
           <li>
-              <a>About us</a>
+              <a href="#">About us</a>
           </li>
         </ul>
       </div>

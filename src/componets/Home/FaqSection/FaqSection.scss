@@ -1,5 +1,5 @@
 #faq-section {
-      background: linear-gradient(45deg, #0f1c4d, #03001ec4),  url(https://ak8.picdn.net/shutterstock/videos/11818658/thumb/1.jpg);
+    background: linear-gradient(45deg, #0f1c4d, #03001ec4),  url(https://ak8.picdn.net/shutterstock/videos/11818658/thumb/1.jpg);
   background-position: center;
   color: white;
   background-repeat: no-repeat;
@@ -40,12 +40,9 @@
  }
 
 }
-
-@keyframes fade-in{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: .3;
+@media screen and (max-width:  767px) {
+  .faq-grid{
+     grid-template-columns: 1fr !important;
+     grid-gap: 50px !important;
   }
 }

@@ -1,0 +1,29 @@
+.img-wrapper{
+      position: relative;
+      .img{
+        background: linear-gradient(#0023ff, #000cedba, #fd00e9, #a7a5a5, #b60000ba, #e300ff, #1a00f8, #000cedba, #1b00ff);
+            width: 40%;
+            -webkit-clip-path: polygon(187px 62px, 187px 30px, 93px 30px, 92px 62px, 30px 62px, 30px 218px, 62px 218px, 62px 249px, 93px 249px, 93px 281px, 124px 281px, 124px 312px, 155px 312px, 155px 343px, 187px 343px, 187px 375px, 218px 375px, 218px 406px, 280px 406px, 280px 375px, 312px 375px, 312px 343px, 343px 343px, 343px 312px, 374px 312px, 374px 281px, 405px 281px, 405px 249px, 437px 249px, 437px 218px, 468px 218px, 468px 62px, 405px 62px, 405px 30px, 312px 30px, 312px 62px, 280px 62px, 280px 93px, 218px 93px, 218px 62px);
+            clip-path: url(#clipPolygon);
+            filter: brightness(5) contrast(10);
+            overflow: visible;
+            background-position-y: 0%;
+            background-size: 100% 500%;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            animation: heart-scroll 50s linear infinite;
+      }
+}
+
+@keyframes heart-scroll {
+  0% {
+    background-position-y: 0;
+    filter: brightness(3) contrast(1);
+  }
+
+  100% {
+    background-position-y: 500%;
+    filter: brightness(3) contrast(1);
+  }
+}

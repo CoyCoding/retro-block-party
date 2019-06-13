@@ -1,10 +1,11 @@
 import React from 'react';
-import './Offseason.scss';
+import './FinishedSchedule.scss';
+import Heart from '.././Heart/Heart';
 
 function FinishedSchedule() {
   return (
     <div className="taking-applications">
-      Schedule: FinishedSchedule
+          Finished Table Need to talk with you guys about this.
     </div>
   );
 }

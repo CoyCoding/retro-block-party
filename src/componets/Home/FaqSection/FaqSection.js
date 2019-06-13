@@ -29,7 +29,7 @@ function FaqSection() {
           </div>
           <div className="description">
             <p>The Retro Block Party takes place once month for whole weekend, so you can party all night long.
-            For more details check out the current <a>Schedule Page</a></p>
+            For more details check out the current <a href="#">Schedule Page</a></p>
           </div>
           </div>
         <div className="faq-location">
@@ -37,7 +37,7 @@ function FaqSection() {
             <h3>How do I join?</h3>
           </div>
           <div className="description">
-            <p>If you want to get off the lawn and on the dance floor check out the <a>Application Page</a> for more info.</p>
+            <p>If you want to get off the lawn and on the dance floor check out the <a href="#">Application Page</a> for more info.</p>
           </div>
           </div>
           </div>

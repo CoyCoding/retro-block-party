@@ -1,13 +1,41 @@
 #schedule{
-  font-size: 3rem;
   min-height: 100vh;
-  background: rebeccapurple;
+  background: #0d0534;
   display: flex;
-justify-content: center;
-align-items: center;
+  align-items: center;
+  justify-content: center;
   .schedule-wrapper{
-    //padding-top: 56px;
+    padding-top: 55px;
     max-width: 1400px;
     margin: 0 auto;
+    .taking-applications{
+      display: flex;
+      align-items: center;
+justify-content: center;
+    }
+  }
+  .taking-applications {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+
+    .info {
+      width: 60%;
+      padding-left: 50px;
+      color: whitesmoke;
+      height: 100%;
+
+      h2 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        text-indent: 3rem;
+      }
+    }
   }
 }
