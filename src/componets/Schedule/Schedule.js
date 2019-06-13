@@ -1,12 +1,10 @@
 import React from 'react';
 import './Schedule.scss';
+//import {handleScheduleStatus} from './Utils/scheduleStatusHandler';
 import TakingApplications from './TakingApplications/TakingApplications';
 import Offseason from './Offseason/Offseason';
-
-function Schedule(props) {
-    console.log(props.scheduleStatus);
+export function Schedule(props) {
   return (
-
     <section id="schedule">
       <div className="schedule-wrapper">
       {handleScheduleStatus(props.scheduleStatus)}
@@ -15,8 +13,8 @@ function Schedule(props) {
   );
 }
 
-const handleScheduleStatus = (scheduleStatus) =>{
-  console.log(scheduleStatus)
+export const handleScheduleStatus = (scheduleStatus) =>{
+  //console.log(<TakingApplications />)
   switch(scheduleStatus){
     case 'open':
     return(
@@ -27,8 +25,6 @@ const handleScheduleStatus = (scheduleStatus) =>{
       <Offseason />
     )
   }
-
 }
 
-
-export default Schedule;
+// export default Schedule;
