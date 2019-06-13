@@ -10,12 +10,13 @@ export default class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			scheduleStatus: 'closed'
+			scheduleStatus: 'scheduleFinished'
+
 		};
-		this.scheduleStatusChange = this.scheduleStatusChange.bind(this);
+		//this.scheduleStatusChange = this.scheduleStatusChange.bind(this);
 	};
 
-	scheduleStatusChange(event) {
+	scheduleStatusChange = (event) => {
 			this.setState({
 				scheduleStatus: event.target.value
 			});

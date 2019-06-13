@@ -10,10 +10,10 @@ export function Schedule(props) {
   return (
     <section id="schedule">
       <select value={props.scheduleStatus} onChange={props.scheduleStatusChange}>
-        <option value="open">open</option>
-        <option value="offseason">offseason</option>
-        <option value="closed">closed</option>
-        <option value="finished">finished</option>
+        <option value="takingApplications">Taking Applications</option>
+        <option value="offseason">Offseason</option>
+        <option value="applicationsClosed">Applications Closed</option>
+        <option value="scheduleFinished">Schedule Finished</option>
       </select>
       <div className="schedule-wrapper">
       {handleScheduleStatus(props.scheduleStatus)}
@@ -23,9 +23,8 @@ export function Schedule(props) {
 }
 
 export const handleScheduleStatus = (scheduleStatus) =>{
-  //console.log(<TakingApplications />)
   switch(scheduleStatus){
-    case 'open':
+    case 'takingApplications':
     return(
       <TakingApplications />
     );
@@ -33,11 +32,11 @@ export const handleScheduleStatus = (scheduleStatus) =>{
     return(
       <Offseason />
     )
-    case 'closed':
+    case 'applicationsClosed':
     return(
       <ApplicationsClosed />
     )
-    case 'finished':
+    case 'scheduleFinished':
     return(
       <FinishedSchedule />
     )

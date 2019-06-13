@@ -10,6 +10,7 @@
    .faq-grid {
      display: grid;
      grid-template-columns: 1fr 1fr;
+     grid-template-rows: repeat(2, minmax(176px, 1fr));
      grid-gap: 100px;
          margin: 0 20px;
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import './FinishedSchedule.scss';
-import Heart from '.././Heart/Heart';
 
 function FinishedSchedule() {
   return (
