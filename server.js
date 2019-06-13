@@ -7,7 +7,7 @@ const app = express();
 
 //create middleware to handle the serving of the App
 app.use('/', serveStatic(path.join(__dirname, '/build')));
-app.get('*', function(req, res){
+app.get('/schedule', function(req, res){
   res.sendFile(__dirname + '/build/index.html');
 })
 //create default port to serve the app
