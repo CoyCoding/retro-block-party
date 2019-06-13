@@ -1,5 +1,13 @@
-#not-found{
-  padding: 200px;
+#schedule{
   font-size: 3rem;
-
+  min-height: 100vh;
+  background: rebeccapurple;
+  display: flex;
+justify-content: center;
+align-items: center;
+  .schedule-wrapper{
+    //padding-top: 56px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }

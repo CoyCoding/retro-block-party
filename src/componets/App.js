@@ -10,7 +10,7 @@ export default class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			scheduleStatus: 'open'
+			scheduleStatus: 'offseason'
 		};
 	};
 

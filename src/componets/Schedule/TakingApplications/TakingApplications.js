@@ -3,8 +3,8 @@ import './TakingApplications.scss';
 
 function TakingApplications() {
   return (
-    <div>
-      open
+    <div className="taking-applications">
+      Schedule: open
     </div>
   );
 }
