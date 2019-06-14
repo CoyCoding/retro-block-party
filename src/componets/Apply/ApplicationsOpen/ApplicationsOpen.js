@@ -99,9 +99,12 @@ export default class ApplicationsOpen extends Component{
 
   handleSubmit = (submitEvent) =>{
     submitEvent.preventDefault();
+
     const data = this.state;
-    axios.post('/apply', {data}).then(function(res){
-      console.log(res)
+    axios
+      .post('/api/apply/', data)
+      .then(function(res){
+        console.log(res)
     });
   }
 
