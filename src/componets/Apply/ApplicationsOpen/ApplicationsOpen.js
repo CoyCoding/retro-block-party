@@ -83,8 +83,6 @@ export default class ApplicationsOpen extends Component{
       }
 
   handleBackupChange = (event) =>{
-    const name  = event.target.name;
-
     this.setState({
         backup: !this.state.backup
 

@@ -20,10 +20,10 @@ function Header() {
             <a href="/apply">  Apply</a>
           </li>
           <li>
-              <a href="#">organize</a>
+              <a href="/apply">organize</a>
           </li>
           <li>
-              <a href="#">About us</a>
+              <a href="/apply">About us</a>
           </li>
         </ul>
       </div>

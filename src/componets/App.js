@@ -38,6 +38,7 @@ export default class App extends Component {
 							<Apply {...props} scheduleStatus={this.state.scheduleStatus} scheduleStatusChange={this.scheduleStatusChange}/>
 						}
 							/>
+							<Route component={NotFound}/>
 				</Switch>
       </Router>
 		);
