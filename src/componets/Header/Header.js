@@ -17,7 +17,7 @@ function Header() {
             <a href="/schedule">Schedule</a>
           </li>
           <li>
-            <a href="#">  Apply</a>
+            <a href="/apply">  Apply</a>
           </li>
           <li>
               <a href="#">organize</a>

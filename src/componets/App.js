@@ -6,11 +6,15 @@ import Header from './Header/Header';
 import Home from './Home/Home';
 import NotFound from './NotFound/NotFound';
 import Schedule from './Schedule/Schedule';
+import Apply from './Apply/Apply';
+
+
+
 export default class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			scheduleStatus: 'scheduleFinished'
+			scheduleStatus: 'takingApplications'
 
 		};
 		//this.scheduleStatusChange = this.scheduleStatusChange.bind(this);
@@ -32,6 +36,10 @@ export default class App extends Component {
 						<Schedule {...props} scheduleStatus={this.state.scheduleStatus} scheduleStatusChange={this.scheduleStatusChange}/>
 					}
 						/>
+						<Route exact path="/apply" render={props =>
+							<Apply {...props} scheduleStatus={this.state.scheduleStatus} scheduleStatusChange={this.scheduleStatusChange}/>
+						}
+							/>
 					<Route component={NotFound}/>
 				</Switch>
       </Router>
