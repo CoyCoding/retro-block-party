@@ -7,7 +7,7 @@ export function Apply(props) {
   return (
     <section id="applications">
       <div className="applications-wrapper">
-      <h2>Applications {handleScheduleStatus(props.scheduleStatus)}</h2>
+      {handleScheduleStatus(props.scheduleStatus)}
       </div>
     </section>
   );
