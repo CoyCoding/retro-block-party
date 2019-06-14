@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './ApplicationsOpen.scss';
 import {HrefLinks} from '../../.././Utils/HrefLinks';
 import Checkbox from './Checkbox';
-
+import axios from 'axios';
 //These are temp values that should come from a DataBase for the checkboxes
 const DATES = ['june 28', 'june 29'];
 const TIMES = ['12:00 AM - 2:00 AM','2:00 AM - 4:00 AM','4:00 AM - 6:00 AM','6:00 AM - 8:00 AM','8:00 AM - 10:00 AM','10:00 AM - 12:00 PM','12:00 PM - 2:00 PM','2:00 PM - 4:00 PM','4:00 PM - 6:00 PM','6:00 PM - 8:00 PM','8:00 PM - 10:00 PM','10:00 PM - 12:00 AM'];
@@ -25,24 +25,47 @@ export default class ApplicationsOpen extends Component{
       [time]: false
     }),
     {}
-  )
+  ),
+  textFields: {},
+  backup: ''
   };
 }
 
-      handleDateChange = (event) =>{
-        const name  = event.target.name;
+  handleTextChange = (event) => {
+  const name = event.target.name;
 
-        this.setState({
-          dates:{
-            ...this.state.dates,
-            [name]: !this.state.dates[name]
-          }
-
-        },
-        ()=>{console.log(this.state)})
+  this.setState({
+      textFields: {
+        ...this.state.textFields,
+        [name]: event.target.value
       }
 
-      handleTimeChange = (event) =>{
+    },
+    () => {
+      console.log(this.state)
+    })
+}
+
+  handleDateChange = (event) => {
+        const name = event.target.name;
+
+        this.setState({
+            dates: {
+              ...this.state.dates,
+              [name]: !this.state.dates[name]
+            }
+
+          },
+          () => {
+            Object.keys(this.state.dates)
+              .filter(date => this.state.dates[date])
+              .forEach(date => {
+                console.log(date, "is selected.");
+              });
+          })
+      }
+
+  handleTimeChange = (event) =>{
         const name  = event.target.name;
 
         this.setState({
@@ -51,10 +74,38 @@ export default class ApplicationsOpen extends Component{
               [name]: !this.state.times[name]
             }
         },
-        ()=>{console.log(this.state)})
+        ()=>{Object.keys(this.state.times)
+          .filter(time => this.state.times[time])
+          .forEach(time => {
+            console.log(time, "is selected.");
+          })
+        })
       }
 
-      createDateCheckbox = date => (
+  handleBackupChange = (event) =>{
+    const name  = event.target.name;
+
+    this.setState({
+        backup: !this.state.backup
+
+    },
+    ()=>{Object.keys(this.state.times)
+      .filter(time => this.state.times[time])
+      .forEach(time => {
+        console.log(time, "is selected.");
+      })
+    })
+  }
+
+  handleSubmit = (submitEvent) =>{
+    submitEvent.preventDefault();
+    const data = this.state;
+    axios.post('/apply', {data}).then(function(res){
+      console.log(res)
+    });
+  }
+
+  createDateCheckbox = date => (
         <Checkbox
           label={date}
           isSelected={this.state.dates[date]}
@@ -63,7 +114,7 @@ export default class ApplicationsOpen extends Component{
         />
       );
 
-      createTimeCheckbox = time => (
+  createTimeCheckbox = time => (
         <Checkbox
           label={time}
           isSelected={this.state.times[time]}
@@ -72,8 +123,17 @@ export default class ApplicationsOpen extends Component{
         />
       );
 
-      createDateCheckboxes = () => DATES.map(this.createDateCheckbox);
-      createTimeCheckboxes = () => TIMES.map(this.createTimeCheckbox);
+  createBackupCheckbox = backup => (
+    <Checkbox
+      label='yes'
+      isSelected={this.state.backup}
+      onCheckboxChange={this.handleBackupChange}
+      />
+  );
+
+  createDateCheckboxes = () => DATES.map(this.createDateCheckbox);
+  createTimeCheckboxes = () => TIMES.map(this.createTimeCheckbox);
+
   render(){
     return (
       <section id="apps-open">
@@ -90,41 +150,67 @@ export default class ApplicationsOpen extends Component{
           If you only apply for one date with only a four hour window, it'll be difficult to fit you in.</p>
           <p>We look forward to reviewing your application!</p>
         </div>
-        </div>
+      </div>
         <div className="application-form">
           <div className="form-header">
             <h5>Please complete the form below</h5>
             <h5>*indicates a required field</h5>
           </div>
           <div className="form-wrapper">
-            <form>
+            <form onSubmit={this.handleSubmit}>
               <div className="form-item">
                 <label htmlFor="twitchName">Twitch Link*</label>
                 <p className="description">Your profile name exactly as it appears on twitch.</p>
-                <input name="twitchName" type="text" placeholder="https://www.twitch.tv/Batman"/>
+                <input name="twitchName" onChange={this.handleTextChange} type="text" placeholder="https://www.twitch.tv/Batman"/>
               </div>
               <div className="form-item">
                 <label htmlFor="discordName">Discord Name*</label>
                 <p className="description">Please make sure you've joined the official RBP Discord so we can message you easily.</p>
-                <input name="discordName" type="text" placeholder="Batman"/>
+                <input name="discordName"  onChange={this.handleTextChange} type="text" placeholder="Batman"/>
               </div>
               <div className="form-item">
                 <label htmlFor="twitterName">Twitter Name</label>
                 <p className="description">Please enter your Twitter name so we may easily find and @ you during your segment.</p>
-                <input name="twitterName" type="text" placeholder="Batman"/>
+                <input name="twitterName"  onChange={this.handleTextChange} type="text" placeholder="Batman"/>
               </div>
               <div className="form-item">
                 <label htmlFor="firstGame">Game 1*</label>
                 <p className="description">The first game you will play during your segment.</p>
-                <input name="firstGame" type="text" placeholder="Super Mario Bro. 2 BBy"/>
+                <input name="firstGame"  onChange={this.handleTextChange} type="text" placeholder="Super Mario Bro. 2 BBy"/>
               </div>
               <div className="form-item">
                 <label htmlFor="secondGame">Game 2*</label>
                 <p className="description">The second game you will play during your segment.</p>
-                <input name="secondGame" type="text" placeholder="Super Mario Bros. 2 again BBy"/>
+                <input name="secondGame"  onChange={this.handleTextChange} type="text" placeholder="Super Mario Bros. 2 again BBy"/>
               </div>
-              {this.createDateCheckboxes()}
-              {this.createTimeCheckboxes()}
+              <div className="form-item">
+                <h5>Available Dates*</h5>
+                <div className="checkbox-section">
+                    {this.createDateCheckboxes()}
+                </div>
+              </div>
+              <div className="form-item">
+                <h5>Available Times*</h5>
+                <p className="description">All Times are in Eastern Time, the more availability you have, the higher chance you have to get into the event!</p>
+                <div className="checkbox-section">
+                  {this.createTimeCheckboxes()}
+                </div>
+              </div>
+              <div className="form-item">
+                <label htmlFor="donationIncentive">Donation Incentive</label>
+                <input name="donationIncentive"  onChange={this.handleTextChange} type="text" placeholder="Super Mario Bros. 2 again BBy"/>
+              </div>
+              <div className="form-item">
+                <label htmlFor="whatDoYouLike">Why would you like to participate in RetroBlockParty? *</label>
+                <textarea name="whatDoYouLike"  onChange={this.handleTextChange} type="text" placeholder="I like the food"/>
+              </div>
+              <div className="form-item">
+                <h5>Would you be willing to be available as a backup streamer?</h5>
+                <div className="checkbox-section">
+                    {this.createBackupCheckbox()}
+                </div>
+                </div>
+                <button name="submint" type="submit" > submit</button>
             </form>
           </div>
         </div>
