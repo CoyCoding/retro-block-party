@@ -15,7 +15,7 @@ function Home() {
             Thank you all, you crazy, amazing people! We wouldn’t be where we are without YOU!  </p>
       </div>
       <div className="img">
-        <img src="https://media.discordapp.net/attachments/477927083809439786/587123859107610624/TFIRneon.png" />
+        <img src="https://media.discordapp.net/attachments/477927083809439786/587123859107610624/TFIRneon.png" alt="the future is retro img"/>
       </div>
 
 

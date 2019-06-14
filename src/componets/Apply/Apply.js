@@ -21,7 +21,7 @@ export const handleScheduleStatus = (scheduleStatus) =>{
     )
     default:
     return(
-      <>default</>
+      <ApplicationsClosed />
     )
   }
 }

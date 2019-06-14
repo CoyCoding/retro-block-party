@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom';
-import logo from '.././logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from './Header/Header';
 import Home from './Home/Home';
@@ -15,9 +14,7 @@ export default class App extends Component {
 		super();
 		this.state = {
 			scheduleStatus: 'takingApplications'
-
 		};
-		//this.scheduleStatusChange = this.scheduleStatusChange.bind(this);
 	};
 
 	scheduleStatusChange = (event) => {

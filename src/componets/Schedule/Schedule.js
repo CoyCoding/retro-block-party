@@ -40,7 +40,10 @@ export const handleScheduleStatus = (scheduleStatus) =>{
     return(
       <FinishedSchedule />
     )
-  }
+    default:
+    //// TODO: 404 error here
+      break;
+    }
 }
 
 export default Schedule;

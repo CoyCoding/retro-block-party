@@ -15,7 +15,7 @@ function Heart() {
           </clipPath>
           </svg>
           </div >
-          <img src={imgUrl} />
+          <img src={imgUrl} alt="rainbow heart" />
         </div >
   );
 }

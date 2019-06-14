@@ -39,7 +39,12 @@
      }
    }
  }
-
+ a{
+       color: #ff7878;
+   &:hover{
+         text-shadow: #fe2c2c 0 0 2px;
+   }
+ }
 }
 @media screen and (max-width:  767px) {
   .faq-grid{
