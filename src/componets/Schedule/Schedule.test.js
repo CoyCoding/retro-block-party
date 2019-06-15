@@ -9,13 +9,14 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('returns TakingApplications on open',()=>{
-  const comp = handleScheduleStatus('open');
+it('returns TakingApplications on takingApplications',()=>{
+  const comp = handleScheduleStatus('takingApplications');
+  console.log(comp)
   console.log(comp.type.name==='TakingApplications');
 })
 
 
-it('returns TakingApplications on open',()=>{
+it('returns Offseason on offseason',()=>{
   const comp = handleScheduleStatus('offseason');
   console.log(comp.type.name ==='Offseason');
 })
